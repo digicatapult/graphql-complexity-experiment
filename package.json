@@ -1,0 +1,26 @@
+{
+  "name": "graphql-complexity-experiment",
+  "version": "1.0.0",
+  "description": "Demonstrator of graphql-query-complexity on apollo-server-express",
+  "main": "./app/index.js",
+  "scripts": {
+    "start": "node app/index.js",
+    "lint": "eslint ."
+  },
+  "author": "Digital Catapult (https://www.digicatapult.org.uk/)",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "apollo-server-express": "^2.9.16",
+    "express": "^4.17.1",
+    "graphql": "^14.5.8",
+    "graphql-query-complexity": "^0.4.1",
+    "graphql-tools": "^4.0.6"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1"
+  }
+}
