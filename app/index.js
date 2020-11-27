@@ -1,17 +1,11 @@
-// boilerplate apollo-graphql-express
-
-const express = require('express')
-const createApolloServer = require('./apollo')
+const createHttpServer = require('./server')
 
 const port = 3000
 
 async function startServer() {
-  const server = createApolloServer()
-  const app = express()
+  const server = createHttpServer()
 
-  server.applyMiddleware({ app })
-
-  app.listen({ port }, err => {
+  server.listen({ port }, err => {
     if (err) {
       console.error('Error starting app:', err)
       throw err
