@@ -5,7 +5,10 @@
   "main": "./app/index.js",
   "scripts": {
     "start": "node app/index.js",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "NODE_ENV=test mocha --config ./mocharc.js ./test",
+    "coverage": "nyc npm run test",
+    "depcheck": "depcheck"
   },
   "author": "Digital Catapult (https://www.digicatapult.org.uk/)",
   "license": "Apache-2.0",
@@ -17,10 +20,14 @@
     "graphql-tools": "^4.0.6"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "depcheck": "^1.3.1",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
-    "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1"
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "prettier": "^1.19.1",
+    "supertest": "^6.0.1"
   }
 }
